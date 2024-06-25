@@ -1,5 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import ResidenteLayout from '../Usuarios/Residente/ResidenteLayout';
 import ResidenteHome from '../Usuarios/Residente/Home/ResidenteHome';
 import ResidenteEncomiendas from '../Usuarios/Residente/Encomiendas/ResidenteEncomiendas';
 import ResidenteAnuncios from '../Usuarios/Residente/Anuncios/ResidenteAnuncios';
@@ -10,12 +11,14 @@ import ResidenteReservas from '../Usuarios/Residente/Reservas/ResidenteReservas'
 const AppRutas = () => {
     return(
         <Routes>
-        <Route path="/residente/home" element={<ResidenteHome />} />
-        <Route path="/residente/encomiendas" element={<ResidenteEncomiendas />} />
-        <Route path="/residente/anuncios" element={<ResidenteAnuncios />} />
-        <Route path="/residente/acceso" element={<ResidenteAcceso />} />
-        <Route path="/residente/pagos" element={<ResidentePagos />} />
-        <Route path="/residente/reservas" element={<ResidenteReservas />} />
+            <Route path="/residente/*" element={<ResidenteLayout />}>
+                <Route path="home" element={<ResidenteHome />} />
+                <Route path="encomiendas" element={<ResidenteEncomiendas />} />
+                <Route path="anuncios" element={<ResidenteAnuncios />} />
+                <Route path="acceso" element={<ResidenteAcceso />} />
+                <Route path="pagos" element={<ResidentePagos />} />
+                <Route path="reservas" element={<ResidenteReservas />} />
+            </Route>
         </Routes>
     );
 };
