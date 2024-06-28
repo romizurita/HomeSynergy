@@ -5,7 +5,7 @@ import ResidenteSidebar from './ResidenteSidebar';
 const ResidenteLayout = () => {
 
   return (
-    <div className="administrador-layout">
+    <div className="administrador-layout" >
       <ResidenteSidebar/>
       <div className="content-area">
         <Outlet /> 

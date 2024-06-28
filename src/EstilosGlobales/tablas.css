@@ -1,0 +1,10 @@
+.encabezado-tabla {
+    background: #3264ec !important; 
+    color: #fff !important;
+  }
+
+.rounded-table {
+  border-radius: 10px;
+  overflow: hidden; /* Asegura que los bordes redondeados se apliquen correctamente */
+}
+
